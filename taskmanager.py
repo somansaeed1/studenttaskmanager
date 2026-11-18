@@ -13,7 +13,11 @@ class TaskManager:
         return list(self.tasks)
 
     def complete_task(self, task_id):
-        pass
+        for task in self.tasks:
+            if task["id"] == task_id:
+                task["done"] = True
+                return True
+        return False
 
     def delete_task(self, task_id):
         pass

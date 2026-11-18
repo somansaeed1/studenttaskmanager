@@ -16,6 +16,7 @@ class TaskManager:
         pass
 
     def delete_task(self, task_id):
+        """Remove the task with this ID. Return False if it does not exist."""
         for task in self.tasks:
             if task["id"] == task_id:
                 self.tasks.remove(task)

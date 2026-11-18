@@ -13,6 +13,7 @@ class TaskManager:
         return list(self.tasks)
 
     def complete_task(self, task_id):
+        """Mark the task with this ID as done. Return False if it does not exist."""
         for task in self.tasks:
             if task["id"] == task_id:
                 task["done"] = True
